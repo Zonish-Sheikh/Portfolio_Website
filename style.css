@@ -11,7 +11,7 @@
 
 :root{
     --text-color: #FEFBF3;
-    --hover-color: #ff4cf9;
+    --hover-color: #EF9587;
     --bg-color: #526d96;
     --second-bg-color: #526d96;
     --big-font: 2.5rem;
@@ -19,14 +19,14 @@
     --h2-font: 3rem;
     --neon-box-shadow: 0 0 0.5rem vat(--accent-color);
     --font-neon-text-shadow:
-    0 0 10px rgba(255, 76, 249, 0.3),
-    0 0 20px rgba(255, 76, 249, 0.3),
-    0 0 30px rgba(255, 76, 249, 0.3),
-    0 0 40px rgba(255, 76, 249, 0.3),
-    0 0 70px rgba(255, 76, 249, 0.3),
-    0 0 80px rgba(255, 76, 249, 0.3),
-    0 0 100px rgba(255, 76, 249, 0.3),
-    0 0 150px rgba(255, 76, 249, 0.3),
+    0 0 10px rgba(18,247,255,0.3),
+    0 0 20px rgba(18, 247, 255, 0.3),
+    0 0 30px rgba(18, 247, 255, 0.3),
+    0 0 40px rgba(18, 247, 255, 0.3),
+    0 0 70px rgba(18, 247, 255, 0.3),
+    0 0 80px rgba(18, 247, 255, 0.3),
+    0 0 100px rgba(18, 247, 255, 0.3),
+    0 0 150px rgba(18, 247, 255, 0.3);
 }
 
 body{
@@ -40,6 +40,41 @@ header{
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding: 20px 10%;
 
 }
+
+.logo{
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+span{
+    color: var(--hover-color);
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+.navlist a:hover {
+    color: var(--hover-color);
+    text-shadow: 0 0 10px rgba(18, 247, 255, 0.6), 
+    0 0 20px rgba(18, 247, 255, 0.6),
+    0 0 30px rgba(18, 247, 255, 0.6),
+    0 0 40px rgba(18, 247, 255, 0.6),
+    0 0 70px rgba(18, 247, 255, 0.6),
+    0 0 80px rgba(18, 247, 255, 0.6),
+    0 0 100px rgba(18, 247, 255, 0.6),
+    0 0 150px rgba(18, 247, 255, 0.6);
+}
+
+
     
