@@ -125,12 +125,11 @@ section{
     position: absolute;
     display: flex;
     opacity: 0;
-
 }
 
 .home-image {
   display: flex;
-  justify-content: flex-end; /* aligns image to the right */
+  justify-content: flex-end;
   align-items: center;
   padding-right: 100px;
 }
