@@ -76,5 +76,24 @@ span{
     0 0 150px rgba(18, 247, 255, 0.6);
 }
 
+#menu-icon{
+    font-size: 1.8rem;
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    background: var(--hover-color);
+    border-radius: 3px;
+    color: var(--second-bg-color);
+    display: none;
+}
+
+
+
+
+
+
+
+
+
 
     
