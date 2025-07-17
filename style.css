@@ -127,6 +127,114 @@ section{
     opacity: 0;
 }
 
+
+.change-text h3 .word .letter{
+    transform-origin: center center 25px;
+}
+
+.change-text h3 .word .letter.out{
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6,0,0.7,0.2);
+}
+
+.change-text h3 .word .letter.in{
+    transition: 0.38s ease;
+}
+
+.change-text h3 .word .letter.behind{
+    transform: rotateX(-90deg);
+
+}
+
+.home-content{
+    color: whitesmoke;
+    line-height: 1.6;
+}
+
+.info-box{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: 1rem 0 2rem;
+    gap: 3rem;
+}
+
+.info-box h5{
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.info-box span{
+    font-size: 600;
+     white-space: nowrap;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  height: 45px;
+  gap: 1rem;
+}
+
+.btn-box a.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: var(--hover-color);
+  color: var(--bg-color);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: all 0.35s ease;
+  box-shadow: var(--neon-box-shadow);
+  text-shadow: var(--neon-text-shadow);
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn-box a.btn:hover {
+  transform: scale(1.03);
+  background-color: #ff6b6b;
+  color: #ffffff;
+  box-shadow:
+    0 0 6px rgba(255, 107, 107, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    inset 0 0 8px rgba(255, 107, 107, 0.25);
+  text-shadow:
+    0 0 2px rgba(255, 255, 255, 0.7),
+    0 0 4px rgba(255, 107, 107, 0.4);
+}
+
+.btn-box a.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--hover-color);
+  z-index: -1;
+  transition: width 0.35s ease;
+}
+
+.btn-box a.btn:hover::before {
+  width: 100%;
+}
+
+.btn-box a.btn:hover {
+  color: #fff;
+  transform: scale(1.03);
+}
+
+
+
 .home-image {
   display: flex;
   justify-content: flex-end;
