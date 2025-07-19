@@ -108,6 +108,7 @@ section{
 .home-content h1{
     font-size: var(--big-font);
     font-weight: 700;
+    transform: none;
 }
 
 .change-text{
@@ -119,14 +120,15 @@ section{
     display: inline-flex;
     margin:0;
     vertical-align: top;
+    transform: none;
 }
 
 .change-text h3 .word{
     position: absolute;
     display: flex;
     opacity: 0;
+    transform: none;
 }
-
 
 .change-text h3 .word .letter{
     transform-origin: center center 25px;
@@ -234,7 +236,6 @@ section{
 }
 
 
-
 .home-image {
   display: flex;
   justify-content: flex-end;
@@ -273,6 +274,113 @@ section{
     max-width: 280px;
   }
 }
+
+/* ABOUT SECTION CSS  --------------------------------------------------------------------- */
+/* 🔥 About Section: Clean, Professional, Fire */
+.about {
+  padding: 6rem 2rem;
+  background-color: #4a6a91;
+  color: #f9fafb;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.about-heading {
+  font-size: 2.7rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e5e7eb;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-text a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.about-text a:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 Highlight Cards Layout */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: #ffffff;
+  color: #1f2937;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ef4444;
+  margin-bottom: 0.5rem;
+}
+
+.card-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.card-content a {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+/*Responsive Refinements */
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 2.2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
 
 
 
