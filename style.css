@@ -377,10 +377,48 @@ a:hover {
 
 /* SHIFT SECTIONS UP BY REDUCING TOP PADDING */
 #about, #experience, section.skills {
-  padding-top: 10px;    /* reduced top padding for upward shift */
-  padding-bottom: 40px; /* keep bottom padding */
+  padding-top: 10px;    
+  padding-bottom: 40px; 
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* SERVICES SECTION CSS */ 
+.main-text{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--hover-color);
+}
+
+.main-text h2{
+  font-weight: 700;
+  font-size: var(--normal-font);
+}
+
+.main-text span{
+  color: white;
+  font-size: .8rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-services{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  grid-gap: 2rem;
+}
+
+.section-services .service-box{
+  flex: 1 1 18rem;
+  padding: 2rem 1 rem 2rem;
+  text-align: center;
+  background: var(--second-bg-color);
+  transition: transform .4s;
+  border-radius: 10px;
 }
