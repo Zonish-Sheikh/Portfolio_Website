@@ -275,124 +275,112 @@ section{
   }
 }
 
-/* ABOUT SECTION CSS  --------------------------------------------------------------------- */
+/* ABOUT SECTION CSS */
+:root {
+  --primary: #ff6863;
+  --text: #f2f2f2;
+  --bg: #364f7a;
+  --card-bg: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.08);
+  --muted: #c3c3c3;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
   margin: 0;
-  padding: 0;
-  background-color: #426193; 
-  color: white;
   line-height: 1.6;
 }
 
-#about {
-  background-color: #426193;
-  padding: 6rem 2rem;
-  text-align: center;
+.section {
+  padding: 40px 20px;
 }
 
-#about h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 2rem;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-#about p {
-  max-width: 900px;
-  margin: 0 auto 1.8rem;
-  font-size: 1.2rem;
-  color: #e0e6f0;
-  font-style: italic;
+.section-heading {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 10px;
 }
 
-#about p strong {
-  font-style: normal;
-  font-weight: 600;
-  color: #ffffff;
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 4px;
 }
 
-#about a {
-  color: #7bc9ff;
+p.lead {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary);
   text-decoration: none;
-  transition: 0.3s ease;
+  font-weight: bold;
 }
 
-#about a:hover {
-  color: #ffffff;
+a:hover {
   text-decoration: underline;
 }
 
-.about-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 3rem;
+/* EXPERIENCE GRID */
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.exp-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* SKILL GRID */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
 }
 
 .card {
-  background: #f5f5f5;
-  color: #333;
-  border-radius: 15px;
-  padding: 2rem;
-  width: 230px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+.card h4 {
+  color: var(--primary);
+  margin-bottom: 10px;
 }
 
-.card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #e63946;
+/* SHIFT SECTIONS UP BY REDUCING TOP PADDING */
+#about, #experience, section.skills {
+  padding-top: 10px;    /* reduced top padding for upward shift */
+  padding-bottom: 40px; /* keep bottom padding */
 }
 
-.card p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #333;
+html {
+  scroll-behavior: smooth;
 }
-
-/* Highlighted link inside card (like GitHub, CV) */
-.card a {
-  color: #4169e1;
-  font-weight: 600;
-  display: inline-block;
-  margin-top: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-.card a:hover {
-  color: #e63946;
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .about-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-    
