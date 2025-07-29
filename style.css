@@ -385,40 +385,78 @@ html {
   scroll-behavior: smooth;
 }
 
-/* SERVICES SECTION CSS */ 
-.main-text{
+/* SERVICES SECTION CSS */
+.main-text {
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
   color: var(--hover-color);
 }
 
-.main-text h2{
+.main-text h2 {
   font-weight: 700;
   font-size: var(--normal-font);
 }
 
-.main-text span{
+.main-text span {
   color: white;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 200;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.section-services{
+.section-services {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  grid-gap: 2rem;
+  gap: 2rem;
+  padding: 20px;
 }
 
-.section-services .service-box{
-  flex: 1 1 18rem;
-  padding: 2rem 1 rem 2rem;
+.service-box {
+  width: 280px;
+  padding: 2rem;
   text-align: center;
   background: var(--second-bg-color);
-  transition: transform .4s;
+  transition: transform 0.4s ease;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+}
+
+.service-icon {
+  border: 2px solid var(--hover-color);
+  padding: 1.5rem;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  color: var(--hover-color);
+}
+
+.service-btn {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .section-services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 90%;
+  }
 }

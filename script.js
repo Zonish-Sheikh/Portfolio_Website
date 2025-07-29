@@ -67,3 +67,19 @@ faders.forEach(el => {
   el.classList.add('fade-init'); // Initial state
   appearOnScroll.observe(el);
 });
+
+/* SERVICES */
+const serviceBoxes = document.querySelectorAll('.service-box');
+
+const revealOnScroll = () => {
+  serviceBoxes.forEach(box => {
+    const boxTop = box.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (boxTop < windowHeight - 50) {
+      box.classList.add('reveal');
+    }
+  });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
