@@ -275,7 +275,7 @@ section{
   }
 }
 
-/* ABOUT SECTION CSS */
+/* ABOUT PAGE CSS */
 :root {
   --primary: #ff6863;
   --text: #f2f2f2;
@@ -385,7 +385,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* SERVICES SECTION CSS */
+/* SERVICES PAGE CSS */
 .main-text {
   width: 100%;
   text-align: center;
@@ -416,47 +416,86 @@ html {
 }
 
 .service-box {
-  width: 280px;
+  width: 300px;
   padding: 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
   text-align: center;
-  background: var(--second-bg-color);
-  transition: transform 0.4s ease;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, background 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.service-box.reveal {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .service-box:hover {
   transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .service-icon {
   border: 2px solid var(--hover-color);
-  padding: 1.5rem;
+  padding: 1.2rem;
   background: var(--bg-color);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
   border-radius: 50%;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1rem;
   color: var(--hover-color);
 }
 
-.service-btn {
-  margin-top: 1rem;
+.service-box h3 {
+  margin: 0.5rem 0 0.2rem;
+  color: white;
+}
+
+.service-box small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.service-box p {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.btn-box.service-btn {
+  margin-top: 1.2rem;
   display: flex;
   justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .section-services {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service-box {
-    width: 90%;
-  }
+.btn {
+  padding: 0.5rem 1.2rem;
+  background-color: var(--hover-color);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background 0.3s ease;
 }
+
+.btn:hover {
+  background-color: #fff;
+  color: var(--hover-color);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+}
+
+/* SKILSS PAGE CSS */

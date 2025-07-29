@@ -68,7 +68,7 @@ faders.forEach(el => {
   appearOnScroll.observe(el);
 });
 
-/* SERVICES */
+// SERVICES SECTION SCROLL REVEAL
 const serviceBoxes = document.querySelectorAll('.service-box');
 
 const revealOnScroll = () => {
