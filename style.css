@@ -275,7 +275,7 @@ section{
   }
 }
 
-/* ABOUT PAGE CSS */
+/* ABOUT PAGE CSS --------------------------------------------------------- */
 :root {
   --primary: #ff6863;
   --text: #f2f2f2;
@@ -375,7 +375,6 @@ a:hover {
   margin-bottom: 10px;
 }
 
-/* SHIFT SECTIONS UP BY REDUCING TOP PADDING */
 #about, #experience, section.skills {
   padding-top: 10px;    
   padding-bottom: 40px; 
@@ -385,7 +384,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* SERVICES SECTION */
+/* SERVICES PAGE ------------------------------------------------------ */
 .services {
   padding: 60px 10%;
   background-color: var(--second-bg-color);
@@ -516,19 +515,17 @@ html {
   }
 }
 
-/* SKILLS PAGE CSS */
-/* ==== SKILLS SECTION ==== */
+/* <----------------------------- SKILLS PAGE CSS --------------------------------------> */
 #skills {
   background: var(--bg-color);
   padding: 100px 20px;
   text-align: center;
 }
 
-/* Section Titles */
 #skills .section-subtitle {
   color: var(--hover-color);
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 15px;
   text-transform: lowercase;
 }
 
@@ -545,7 +542,6 @@ html {
   margin-bottom: 40px;
 }
 
-/* Layout */
 .skill-main {
   display: flex;
   justify-content: center;
@@ -555,7 +551,6 @@ html {
   margin: 0 auto;
 }
 
-/* Skill Boxes */
 .skill-left,
 .skill-right {
   background-color: rgba(255, 255, 255, 0.05);
@@ -563,11 +558,10 @@ html {
   border-radius: 12px;
   flex: 1;
   min-width: 300px;
-  box-shadow: 0 4px 20px rgba(239, 149, 135, 0.15); /* hover-color with alpha */
+  box-shadow: 0 4px 20px rgba(239, 149, 135, 0.15); 
   backdrop-filter: blur(6px);
 }
 
-/* Technical Skill Bars */
 .skill-bar {
   margin: 20px 0;
 }
@@ -595,7 +589,6 @@ html {
   animation: grow 2s ease forwards;
 }
 
-/* Circular Progress Bars */
 .circular-bars-container {
   display: flex;
   flex-wrap: wrap;
@@ -672,3 +665,5 @@ html {
     max-width: 500px;
   }
 }
+
+

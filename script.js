@@ -1,3 +1,5 @@
+
+/* HOME PAGE ------------------------------------------------------ */
 let words = document.querySelectorAll(".word");
 
 words.forEach((word) => {
@@ -46,7 +48,7 @@ let changeText = () => {
 changeText();
 setInterval(changeText, 3000);
 
-/* ABOUT */
+/* ABOUT PAGE --------------------------------------- */
 
 const faders = document.querySelectorAll('.card, .about-text, .about-heading');
 
@@ -68,7 +70,7 @@ faders.forEach(el => {
   appearOnScroll.observe(el);
 });
 
-// SERVICES SECTION SCROLL REVEAL
+// SERVICES SECTION SCROLL REVEAL -------------------------------------
 const serviceBoxes = document.querySelectorAll('.service-box');
 
 const revealOnScroll = () => {
@@ -84,7 +86,6 @@ const revealOnScroll = () => {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
-// Add this script before closing </body> or in your JS file
 document.addEventListener('DOMContentLoaded', () => {
   const boxes = document.querySelectorAll('.service-box');
 
@@ -109,7 +110,7 @@ function toggleDarkMode() {
   }
 }
 
-// SKILLS PAGE : 
+// SKILLS PAGE -------------------------------------------------- // 
 document.addEventListener("DOMContentLoaded", () => {
   const circles = document.querySelectorAll(".circular-bar");
 
