@@ -385,117 +385,290 @@ html {
   scroll-behavior: smooth;
 }
 
-/* SERVICES PAGE CSS */
-.main-text {
-  width: 100%;
+/* SERVICES SECTION */
+.services {
+  padding: 60px 10%;
+  background-color: var(--second-bg-color);
+}
+
+.services .main-text {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 50px;
+}
+
+.services .main-text span {
   color: var(--hover-color);
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
-.main-text h2 {
-  font-weight: 700;
-  font-size: var(--normal-font);
-}
-
-.main-text span {
-  color: white;
-  font-size: 0.8rem;
-  font-weight: 200;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.services .main-text h2 {
+  font-size: var(--h2-font);
+  margin-top: 10px;
 }
 
 .section-services {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 20px;
 }
 
 .service-box {
-  width: 300px;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(4px);
-  border-radius: 12px;
-  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  transition: transform 0.4s ease, background 0.3s ease;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease;
-}
-
-.service-box.reveal {
-  opacity: 1;
-  transform: translateY(0);
+  border-radius: 16px;
+  padding: 30px 20px;
+  transition: 0.4s ease;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .service-box:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--hover-color);
 }
 
 .service-icon {
-  border: 2px solid var(--hover-color);
-  padding: 1.2rem;
-  background: var(--bg-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  border-radius: 50%;
-  margin: 0 auto 1rem;
+  font-size: 2.5rem;
   color: var(--hover-color);
+  margin-bottom: 15px;
 }
 
 .service-box h3 {
-  margin: 0.5rem 0 0.2rem;
-  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: var(--text-color);
 }
 
 .service-box small {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 15px;
   display: block;
-  font-size: 0.75rem;
-  color: var(--muted);
-  margin-bottom: 1rem;
-  letter-spacing: 0.5px;
 }
 
 .service-box p {
-  font-size: 0.9rem;
-  color: var(--text);
+  font-size: 0.95rem;
+  color: #eee;
   line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-.btn-box.service-btn {
-  margin-top: 1.2rem;
+.service-btn .btn {
+  background: transparent;
+  border: 2px solid var(--hover-color);
+  color: var(--hover-color);
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: 0.3s ease;
+}
+
+.service-btn .btn:hover {
+  background: var(--hover-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 8px rgba(239, 149, 135, 0.4);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-box {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.1s;
+}
+
+.service-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation-name: fadeInUp;
+}
+
+@media (max-width: 600px) {
+  .services {
+    padding: 40px 5%;
+  }
+
+  .service-box {
+    padding: 25px 15px;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .service-btn .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+/* SKILLS PAGE CSS */
+/* ==== SKILLS SECTION ==== */
+#skills {
+  background: var(--bg-color);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Section Titles */
+#skills .section-subtitle {
+  color: var(--hover-color);
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-transform: lowercase;
+}
+
+#skills .section-title {
+  font-size: var(--h2-font);
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+#skills p {
+  color: var(--text-color);
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+/* Layout */
+.skill-main {
   display: flex;
   justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.btn {
-  padding: 0.5rem 1.2rem;
-  background-color: var(--hover-color);
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  font-weight: 500;
-  transition: background 0.3s ease;
+/* Skill Boxes */
+.skill-left,
+.skill-right {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 300px;
+  box-shadow: 0 4px 20px rgba(239, 149, 135, 0.15); /* hover-color with alpha */
+  backdrop-filter: blur(6px);
 }
 
-.btn:hover {
-  background-color: #fff;
-  color: var(--hover-color);
+/* Technical Skill Bars */
+.skill-bar {
+  margin: 20px 0;
 }
 
-/* RESPONSIVE */
+.skill-bar .info {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-color);
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.bar {
+  background: #222;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: var(--hover-color);
+  width: 0;
+  animation: grow 2s ease forwards;
+}
+
+/* Circular Progress Bars */
+.circular-bars-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.circular-bar {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+}
+
+.circular-bar svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circular-bar circle {
+  fill: none;
+  stroke-width: 10;
+  cx: 50%;
+  cy: 50%;
+  r: 50;
+}
+
+.circular-bar circle:first-child {
+  stroke: #333;
+}
+
+.circular-bar circle:last-child {
+  stroke: var(--hover-color);
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 2s ease;
+}
+
+.circular-bar .percentage {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.circular-bar p {
+  margin-top: 10px;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes grow {
+  from {
+    width: 0;
+  }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-}
+  .skill-main {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* SKILSS PAGE CSS */
+  .skill-left,
+  .skill-right {
+    width: 100%;
+    max-width: 500px;
+  }
+}

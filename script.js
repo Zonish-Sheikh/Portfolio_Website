@@ -83,3 +83,40 @@ const revealOnScroll = () => {
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
+
+// Add this script before closing </body> or in your JS file
+document.addEventListener('DOMContentLoaded', () => {
+  const boxes = document.querySelectorAll('.service-box');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  boxes.forEach(box => observer.observe(box));
+});
+
+// Example toggle function
+function toggleDarkMode() {
+  if (document.documentElement.getAttribute('data-theme') === 'dark') {
+    document.documentElement.removeAttribute('data-theme');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+}
+
+// SKILLS PAGE : 
+document.addEventListener("DOMContentLoaded", () => {
+  const circles = document.querySelectorAll(".circular-bar");
+
+  circles.forEach((bar) => {
+    const value = bar.getAttribute("data-percent");
+    const circle = bar.querySelectorAll("circle")[1];
+    const offset = 314 - (314 * value) / 100;
+    circle.style.strokeDashoffset = offset;
+  });
+});
