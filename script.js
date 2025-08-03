@@ -70,7 +70,7 @@ faders.forEach(el => {
   appearOnScroll.observe(el);
 });
 
-// SERVICES SECTION SCROLL REVEAL -------------------------------------
+// SERVICES SECTION SCROLL REVEAL ------------------------------------- //
 const serviceBoxes = document.querySelectorAll('.service-box');
 
 const revealOnScroll = () => {
@@ -121,3 +121,27 @@ document.addEventListener("DOMContentLoaded", () => {
     circle.style.strokeDashoffset = offset;
   });
 });
+
+// Portfolio Filter
+const filterButtons = document.querySelectorAll('.filter-buttons .btn');
+const portfolioItems = document.querySelectorAll('.port-box');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.btn.active').classList.remove('active');
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+
+    portfolioItems.forEach(box => {
+      const category = box.dataset.category;
+      if (filter === 'all' || category.includes(filter)) {
+        box.style.display = 'block';
+      } else {
+        box.style.display = 'none';
+      }
+    });
+  });
+});
+
+
