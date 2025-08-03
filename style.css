@@ -869,11 +869,8 @@ html {
 }
 
 #portfolio {
-  scroll-margin-top: 100px;
-}
-
-.portfolio {
-  padding-bottom: 80px;
+  scroll-margin-top: 120px;
+  padding-bottom: 120px; 
 }
 
 .container {
@@ -881,4 +878,111 @@ html {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
+}
+
+section {
+  scroll-margin-top: 120px;
+}
+
+.port-box {
+  transition: opacity 0.3s ease;
+}
+.port-box[style*="display: none"] {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+
+
+.contact {
+  padding: 80px 10%;
+  background-color: var(--second-bg-color);
+  color: var(--text-color);
+}
+
+.contact .main-text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact .main-text span {
+  color: var(--hover-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.contact .main-text h2 {
+  font-size: var(--h2-font);
+  margin-top: 10px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--hover-color);
+}
+
+.submit-btn {
+  background: var(--hover-color);
+  color: var(--bg-color);
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #ff6b6b;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(239, 149, 135, 0.5);
+}
+
+.form-status {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: var(--hover-color);
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 60px 5%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+  }
 }

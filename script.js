@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Portfolio Filter
+// Portfolio PAGE -------------------------------------------------//
 const filterButtons = document.querySelectorAll('.filter-buttons .btn');
 const portfolioItems = document.querySelectorAll('.port-box');
 
@@ -144,4 +144,38 @@ filterButtons.forEach(btn => {
   });
 });
 
+// --- Smooth scroll with offset ---
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const offset = 100; // Adjust based on nav height
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  });
+});
 
+
+// Contact PAGE -------------------------------------------------//
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Example: just show message after "sending"
+    status.textContent = "Sending...";
+    status.style.color = "var(--hover-color)";
+
+    setTimeout(() => {
+      status.textContent = "Thank you! Your message has been sent.";
+      status.style.color = "#28a745";
+      form.reset();
+    }, 1500);
+
+    // TODO: Replace with real sending logic (e.g. Formspree, EmailJS, backend API)
+  });
+});
