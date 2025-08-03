@@ -894,11 +894,13 @@ section {
   overflow: hidden;
 }
 
+/* CONTACT PAGE CSS */
 
 .contact {
   padding: 80px 10%;
-  background-color: var(--second-bg-color);
+  background: linear-gradient(145deg, #2e3d55;, #2c3e64);
   color: var(--text-color);
+  min-height: 100vh;
 }
 
 .contact .main-text {
@@ -907,68 +909,83 @@ section {
 }
 
 .contact .main-text span {
-  color: var(--hover-color);
-  font-weight: 500;
-  font-size: 1.1rem;
-  display: block;
+  color: #ff8a80;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 .contact .main-text h2 {
   font-size: var(--h2-font);
+  color: #ffffff;
   margin-top: 10px;
 }
 
 .contact-form {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 14px 16px;
-  border: none;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-color);
+  padding: 15px 18px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
   font-size: 1rem;
+  color: #ffffff;
   outline: none;
-  transition: border 0.3s ease;
-  border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+  transition: 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: var(--hover-color);
+  border-color: #ff8a80;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .submit-btn {
-  background: var(--hover-color);
-  color: var(--bg-color);
-  padding: 12px 30px;
+  background: #ff8a80;
+  color: #fff;
+  padding: 14px 32px;
   border-radius: 8px;
   font-weight: 600;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   transition: background 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(255, 138, 128, 0.4);
 }
 
 .submit-btn:hover {
-  background: #ff6b6b;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(239, 149, 135, 0.5);
+  background: #ff6e6e;
+  box-shadow: 0 6px 20px rgba(255, 110, 110, 0.5);
 }
 
 .form-status {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 0.95rem;
-  color: var(--hover-color);
+  font-weight: 500;
+  color: #ffccbc;
 }
 
 @media (max-width: 600px) {
@@ -976,13 +993,11 @@ section {
     padding: 60px 5%;
   }
 
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.95rem;
+  .contact-form {
+    padding: 30px 20px;
   }
 
   .submit-btn {
     width: 100%;
-    text-align: center;
   }
 }

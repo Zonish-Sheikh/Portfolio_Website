@@ -166,16 +166,20 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Example: just show message after "sending"
+    // Disable submit button temporarily
+    const submitBtn = form.querySelector("button[type='submit']");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
     status.textContent = "Sending...";
-    status.style.color = "var(--hover-color)";
+    status.style.color = "#ffc107";
 
+    // Simulated sending
     setTimeout(() => {
-      status.textContent = "Thank you! Your message has been sent.";
+      status.textContent = "✅ Thank you! Your message has been sent.";
       status.style.color = "#28a745";
       form.reset();
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send Message";
     }, 1500);
-
-    // TODO: Replace with real sending logic (e.g. Formspree, EmailJS, backend API)
   });
 });
